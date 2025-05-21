@@ -1,0 +1,41 @@
+src/
+├── App.js
+├── routes/
+│   ├── home/
+│   │   └── home.component.jsx
+│   ├── shop/
+│   │   └── shop.component.jsx
+│   └── sign-in/
+│       └── sign-in.component.jsx
+├── components/
+│   └── navigation/
+│       └── navigation.component.jsx
+
+ // main SignIn Component ====>
+  // const SignIn = () => {
+  //   useEffect(() => {
+  //     // handle to google redirect signin
+  //     const fetchRedirectResult = async () => {
+  //       try {
+  //         const response = await getRedirectResult(auth);
+  //         // if user response,create the user doc in firestore
+  //         if (response) {
+  //           const userDocRef = await createUserDocumentFromAuth(response.user);
+  //           console.log("Redirect sign-in result:", response);
+  //         }
+  //       } catch (error) {
+  //         console.error("Redirect error:", error);
+  //       }
+  //     };
+
+  //   fetchRedirectResult(); // trigger the redirect result check
+  // }, []); // run only once
+
+  formFields = { displayName: "Aung", email: "aung@gmail.com", password: "", confirmPassword: "" }
+
+  setFormFields({
+  displayName: "Aung",
+  email: "aung@gmail.com",
+  password: "abcd1234", // updated!
+  confirmPassword: ""
+});
