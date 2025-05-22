@@ -52,15 +52,24 @@ const SignInForm = () => {
       alert("🎉 Sign In Successful");
       resetFormFields();
     } catch (error) {
-      console.log(error);
-      switch (error.code) {
-        case "auth/invalid-credential":
-          alert("incorrect password");
-          break;
-        default:
-          console.log(error);
-          alert("Something went wrong!!!");
-      }
+      console.error("Firebase Sign-in Error:", error);
+      alert("Sign In Error: Username and password does not match!!!");
+      // switch (error.code) {
+      //   case "auth/user-not-found":
+      //     alert("❌ No user with that email.");
+      //     break;
+      //   case "auth/wrong-password":
+      //     alert("❌ Incorrect password.");
+      //     break;
+      //   case "auth/invalid-email":
+      //     alert("❌ Invalid email format.");
+      //     break;
+      //   case "auth/too-many-requests":
+      //     alert("⚠️ Too many failed attempts. Try again later.");
+      //     break;
+      //   default:
+      //     alert("⚠️ Something went wrong: " + error.message);
+      // }
     }
   };
 
