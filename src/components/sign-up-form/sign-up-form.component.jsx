@@ -21,8 +21,6 @@ const SignUpForm = () => {
   const [formFields, setFormFields] = useState(defaultFormFields); // create state for input field
   const { displayName, email, password, confirmPassword } = formFields;
 
-  console.log(formFields);
-
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
   };
@@ -41,6 +39,7 @@ const SignUpForm = () => {
       );
 
       await createUserDocumentFromAuth(user, { displayName }); // save another extra user in firebase
+      alert("🎉 Account created successfully! You can now sign in.");
       resetFormFields();
     } catch (error) {
       // Error code is coming from the dev tools
