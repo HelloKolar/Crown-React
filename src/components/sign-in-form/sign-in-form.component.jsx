@@ -5,7 +5,6 @@ import Button from "../button/button.component";
 
 import {
   signInWithGooglePopup,
-  createUserDocumentFromAuth,
   signInAuthUserWithEmailAndPassword,
 } from "../../utils/firebase/firebase.utils";
 
@@ -24,18 +23,11 @@ const SignInForm = () => {
     setFormFields(defaultFormFields);
   };
 
-  // const signInWithGoogle = async () => {
-  //   const { user } = await signInWithGooglePopup();
-  //   await createUserDocumentFromAuth(user);
-  // };
-
   const signInWithGoogle = async () => {
     try {
-      const { user } = await signInWithGooglePopup();
-      await createUserDocumentFromAuth(user);
+      await signInWithGooglePopup();
       alert("🎉 Google Sign In Successful");
     } catch (error) {
-      console.log(error);
       alert("Something went wrong with Google Sign In!");
     }
   };
@@ -44,32 +36,18 @@ const SignInForm = () => {
     event.preventDefault();
 
     try {
-      const response = await signInAuthUserWithEmailAndPassword(
-        email,
-        password
-      );
-      console.log(response);
+      await signInAuthUserWithEmailAndPassword(email, password);
       alert("🎉 Sign In Successful");
+
       resetFormFields();
     } catch (error) {
-      console.error("Firebase Sign-in Error:", error);
-      alert("Sign In Error: Username and password does not match!!!");
-      // switch (error.code) {
-      //   case "auth/user-not-found":
-      //     alert("❌ No user with that email.");
-      //     break;
-      //   case "auth/wrong-password":
-      //     alert("❌ Incorrect password.");
-      //     break;
-      //   case "auth/invalid-email":
-      //     alert("❌ Invalid email format.");
-      //     break;
-      //   case "auth/too-many-requests":
-      //     alert("⚠️ Too many failed attempts. Try again later.");
-      //     break;
-      //   default:
-      //     alert("⚠️ Something went wrong: " + error.message);
-      // }
+      switch (error.code) {
+        case "auth/invalid-credential":
+          alert("❌ Email and Password do not match");
+          break;
+        default:
+          alert("⚠️ Something went wrong: " + error.message);
+      }
     }
   };
 
