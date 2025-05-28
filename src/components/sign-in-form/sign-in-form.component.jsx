@@ -38,7 +38,6 @@ const SignInForm = () => {
     try {
       await signInAuthUserWithEmailAndPassword(email, password);
       alert("🎉 Sign In Successful");
-
       resetFormFields();
     } catch (error) {
       switch (error.code) {
