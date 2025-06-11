@@ -53,10 +53,10 @@ export const CartContext = createContext({
 });
 
 export const CartProvider = ({ children }) => {
-  const [isCartOpen, setIsCartOpen] = useState(false);
-  const [cartItems, setCartItems] = useState([]);
-  const [cartCount, setCartCount] = useState(0);
-  const [cartTotal, setCartTotal] = useState(0);
+  const [isCartOpen, setIsCartOpen] = useState(false); // Controle carts visibility
+  const [cartItems, setCartItems] = useState([]); // store cartItems
+  const [cartCount, setCartCount] = useState(0); // TotalQuantity of Items
+  const [cartTotal, setCartTotal] = useState(0); // Total Costs of Items
 
   // for cartCount
   useEffect(() => {
