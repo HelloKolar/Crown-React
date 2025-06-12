@@ -1,0 +1,37 @@
+[debug] [2025-06-11T12:49:49.720Z] ----------------------------------------------------------------------
+[debug] [2025-06-11T12:49:49.733Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ASUS\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2025-06-11T12:49:49.734Z] CLI Version:   14.4.0
+[debug] [2025-06-11T12:49:49.734Z] Platform:      win32
+[debug] [2025-06-11T12:49:49.734Z] Node Version:  v20.13.1
+[debug] [2025-06-11T12:49:49.735Z] Time:          Wed Jun 11 2025 19:19:49 GMT+0630 (Myanmar Time)
+[debug] [2025-06-11T12:49:49.735Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-06-11T12:49:49.738Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2025-06-11T12:49:49.845Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-06-11T12:49:49.846Z] > authorizing via signed-in user (aungnyeinchann416@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\ASUS\Desktop\react-shopping
+
+[debug] [2025-06-11T12:49:50.688Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2025-06-11T12:49:50.688Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2025-06-11T12:50:08.551Z] ExitPromptError: User force closed the prompt with SIGINT
+    at Interface.sigint (C:\Users\ASUS\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\@inquirer\core\dist\commonjs\lib\create-prompt.js:100:37)
+    at Interface.emit (node:events:519:28)
+    at Interface.emit (node:domain:488:12)
+    at [_ttyWrite] [as _ttyWrite] (node:internal/readline/interface:1126:18)
+    at ReadStream.onkeypress (node:internal/readline/interface:265:20)
+    at ReadStream.emit (node:events:531:35)
+    at ReadStream.emit (node:domain:488:12)
+    at emitKeys (node:internal/readline/utils:371:14)
+    at emitKeys.next (<anonymous>)
+    at ReadStream.onData (node:internal/readline/emitKeypressEvents:64:36)
+[error] 
+[error] Error: An unexpected error has occurred.
